@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="false" scanPeriod="10 seconds">
+
+	<!-- ==============================   APPENDERS   ============================= -->
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{45}  - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- ==============================   LOGGERS   ============================= -->
+
+	<root level="INFO">
+		<appender-ref ref="CONSOLE" />
+	</root>
+	
+	<logger level="DEBUG" name="com.java" />
+	<logger level="DEBUG" name="Eclipselink" />
+	<logger level="INFO"  name="org.springframework" />
+
+	<!-- Stavljaju se na warn kako ne bi ispisivali beskorisne info poruke: -->
+	<logger level="WARN"  name="org.springframework.web.context.support.XmlWebApplicationContext" 
+/>
+	<logger level="WARN"  name="org.springframework.security.config.SecurityNamespaceHandler" />
+	<logger level="WARN"  name="org.springframework.security.core.SpringSecurityCoreVersion" />
+	<logger level="WARN"  name="org.springframework.security.config.http.DefaultFilterChainValidator" />
+	<logger level="WARN"  name="org.springframework.security.config.http.HttpSecurityBeanDefinitionParser" />
+	<logger level="WARN"  name="org.springframework.security.web.DefaultSecurityFilterChain" />
+	<logger level="WARN"  name="org.springframework.context.weaving.DefaultContextLoadTimeWeaver" />
+	<logger level="WARN"  name="org.springframework.beans.factory.support.DefaultListableBeanFactory" />
+	<logger level="WARN"  name="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" />
+	<logger level="WARN"  name="org.springframework.context.annotation.ClassPathBeanDefinitionScanner" />
+	<logger level="WARN"  name="org.springframework.context.support.PostProcessorRegistrationDelegate" />
+	<logger level="WARN"  name="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+	<logger level="ERROR"  name="org.springframework.context.annotation.ConfigurationClassPostProcessor" />
+
+</configuration>
